@@ -1,0 +1,19 @@
+{
+  "compilerOptions": {
+    "module": "system",
+    "target": "es5",
+    "noImplicitAny": false,
+    "sourceMap": false,
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true,
+    "outDir": "dist",
+    "declaration": true,
+    "moduleResolution": "node"
+  },
+  "files": [
+    "typings/browser.d.ts",
+    "./src/web.ts",
+    "./src/desktop.ts",
+    "./src/electron-bootstrap.ts"
+  ]
+}
