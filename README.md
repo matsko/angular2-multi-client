@@ -8,6 +8,7 @@ This is a starter code repo for getting angular2 to work in multiple clients (we
 1. run `npm install http-server -g`
 1. run `npm install gulp -g`
 1. run `npm install typings -g`
+1. run `npm install typescript -g`
 1. run `npm install electron-prebuilt -g`
 1. run `npm install`
 1. run `typings install`
