@@ -3,13 +3,16 @@
   "version": "0.0.0",
   "license": "MIT",
   "scripts": {
-    "tsc-desktop": "tsc -m commonjs --outDir ./dist/desktop",
+    "clean-web": "rm -fr ./dist/web",
+    "clean-desktop": "rm -fr ./dist/desktop",
+
+    "tsc-desktop": "npm run clean-desktop; tsc -m commonjs --outDir ./dist/desktop",
     "compile-desktop": "npm run tsc-desktop; gulp copy-desktop-files; cp src/index-desktop.html ./dist/desktop/index.html",
     "preview-desktop": "npm run compile-desktop; DESKTOP_DIST_DIR=dist/desktop/ electron ./dist/desktop/desktop.js",
 
-    "tsc-web": "tsc -m system --outDir ./dist/web",
+    "tsc-web": "npm run clean-web; tsc -m system --outDir ./dist/web",
     "compile-web": "npm run tsc-web; gulp copy-web-files; mv ./dist/web/index-web.html ./dist/web/index.html; rm ./dist/web/index-desktop.html",
-    "preview-web": "npm run compile-web; open 'http://localhost:6644/dist/web'; http-server -p 6644 ."
+    "preview-web": "npm run compile-web; open 'http://localhost:6644/dist/web'; http-server -c-1 -p 6644 ."
   },
   "dependencies": {
     "angular2": "2.0.0-beta.6",

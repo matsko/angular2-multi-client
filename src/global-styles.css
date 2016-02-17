@@ -1,0 +1,8 @@
+*, *:after, *:before { box-sizing: border-box; }
+body { background:#aaa; box-shadow:inset 0 0 100px #222; }
+html, body, input, pre, select, option {
+  font-family: 'Open Sans', sans-serif;
+  font-size:20px;
+}
+html, body { padding:0; margin:0; }
+body { padding:5%; }

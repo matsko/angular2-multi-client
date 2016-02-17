@@ -1,0 +1,12 @@
+<header>
+  <h2>
+    {{ monthName }} {{ year }}
+  </h2>
+</header>
+<div class="calendar-grid">
+  <div *ngFor="#cell of cells" [attr.class]="generateCssClass(cell)">
+    <div *ngIf="cell.type == 'day'">
+      <span class="number">{{ cell.day }}</span>
+    </div>
+  </div>
+</div>
